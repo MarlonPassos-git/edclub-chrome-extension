@@ -3,6 +3,7 @@
   "name": "edclub-chrome-extension",
   "version": "0.1.0",
   "description": "Add shortcuts to edclub.com",
+  "homepage_url": "https://github.com/MarlonPassos-git/edclub-chrome-extension",
   "action": { 
     "default_popup": "index.html", 
     "default_icon": {
