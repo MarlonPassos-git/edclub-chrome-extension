@@ -1,0 +1,1 @@
+export const COMMAND_ACTION = 'EXEC_COMMAND_ACTION'

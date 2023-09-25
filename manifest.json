@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "edclub-chrome-extension",
+  "version": "0.1.0",
+  "description": "Add shortcuts to edclub.com",
+  "action": { 
+    "default_popup": "index.html", 
+    "default_icon": {
+      "32": "icon.png"
+    },
+    "default_title": "edclub chrome extension" 
+  },
+  "content_scripts": [
+    {
+      "js": ["src/content.ts"],
+      "matches": ["https://www.edclub.com/*"]
+    }
+  ],
+  "commands": {
+    "reloadLesson": {
+      "suggested_key": {
+        "default": "Ctrl+Space",
+        "windows": "Ctrl+Space"
+      },
+      "description": "reload typing learning lesson"
+    }
+  },
+  "icons": {
+    "256": "icon.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "src/background.ts"
+  }
+}
